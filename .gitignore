@@ -1,0 +1,33 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Node Radar local state and secrets
+.env
+data/
+tests/fixtures/raw/
+*.log
+
+# --- added for GitHub push ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+id_rsa*
+credentials*.json
+node_modules/
+.venv/
+venv/
+__pycache__/
+dist/
+build/
+out/
+.DS_Store

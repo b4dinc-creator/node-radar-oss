@@ -1,0 +1,31 @@
+[project]
+name = "node-radar"
+version = "0.1.0"
+description = "Telegram alert when a device joins one ASUS AiMesh node (own network only)"
+authors = [
+    { name = "Waleed Masood Badri", email = "b4dinc@gmail.com" }
+]
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "asyncssh>=2.24.1",
+    "httpx>=0.28.1",
+    "pydantic-settings>=2.16.2",
+]
+
+[build-system]
+requires = ["uv_build>=0.12.19,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.2.0",
+    "pytest-asyncio>=1.4.1.post1",
+]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.uv.build-backend]
+module-name = "noderadar"
